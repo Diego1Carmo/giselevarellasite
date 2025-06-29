@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela Compra | Código da Manicure</title>
+    <meta name="description" content="Bem-vinda ao Código da Manicure! Sua jornada profissional começa agora">
+    
+    <!-- Preload da imagem crítica do logo -->
+    <link rel="preload" href="images/LogoPreto.png" as="image" type="image/png">
+    
+    <!-- Resource hints para melhor performance -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+        }
+        
+        .success-gradient {
+            background: linear-gradient(135deg, #ac5a2e 0%, #8b4513 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .celebration-icon {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-brown': '#ac5a2e',
+                        'custom-gray': '#f5f5f5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-gray">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg py-2 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center">
+                <!-- Logo -->
+                <div class="text-center">
+                    <div class="logo">
+                        <img src="images/LogoPreto.png" 
+                             alt="Logo O Código da Manicure" 
+                             class="mx-auto" 
+                             width="120" 
+                             height="80" 
+                             decoding="async">
+                        <p class="text-xs text-gray-600 tracking-wider font-bold hidden sm:block">O código da Manicure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Success Hero Section -->
+    <section class="success-gradient pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-16 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <div class="celebration-icon mb-6">
+                <i class="fas fa-check-circle text-6xl sm:text-8xl text-green-400"></i>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                🎉 Parabéns! Sua compra foi realizada com sucesso! 🎉
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 opacity-90">
+                Bem-vinda ao <strong>Código da Manicure</strong>!<br>
+                Sua jornada para se tornar uma manicure profissional de excelência começa agora.
+            </p>
+            <div class="bg-white bg-opacity-20 rounded-2xl p-6 sm:p-8 backdrop-blur-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-4">
+                    <i class="fas fa-gift mr-2"></i>
+                    Mensagem especial da Gisele Varela
+                </h2>
+                <p class="text-base sm:text-lg opacity-90">
+                    Assista ao vídeo abaixo para conhecer melhor o curso e receber suas primeiras orientações
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Mensagem de Boas-Vindas
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Uma mensagem especial da Gisele Varela para você que acaba de ingressar no curso
+                </p>
+            </div>
+            
+            <div class="bg-custom-gray rounded-3xl p-6 sm:p-8 lg:p-12 card-hover">
+                <div class="video-container mb-6">
+                    <!-- Substitua este iframe/video pela sua fonte de vídeo -->
+                    <video controls class="w-full h-full rounded-xl">
+                        <source src="video/boasvindas.mp4" type="video/mp4">
+                        <!-- Alternativa com iframe do YouTube/Vimeo -->
+                        <!-- <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">
+                        Sua jornada profissional começa aqui! ✨
+                    </h3>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                        Neste vídeo, a Gisele explica como acessar o conteúdo 
+                        e te dá as primeiras dicas para começar sua transformação profissional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Próximos Passos
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Siga estas etapas para aproveitar ao máximo seu curso
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover text-center">
+                    <div class="bg-custom-brown bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-custom-brown text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        <i class="fas fa-envelope mr-2 text-custom-brown"></i>
+                        Verifique seu E-mail
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Em alguns minutos você receberá um e-mail com suas credenciais de acesso ao curso e instruções completas.
+                        Caso não tenha chego, verifique sua caixa de spam.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover text-center">
+                    <div class="bg-custom-brown bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-custom-brown text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        <i class="fas fa-users mr-2 text-custom-brown"></i>
+                        Entre no Grupo VIP
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Você receberá o link para nosso grupo exclusivo no WhatsApp com outras alunas e suporte direto.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover text-center md:col-span-2 lg:col-span-1">
+                    <div class="bg-custom-brown bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-custom-brown text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        <i class="fas fa-play mr-2 text-custom-brown"></i>
+                        Comece as Aulas
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Acesse a plataforma e comece imediatamente com o primeiro módulo. Estude no seu ritmo!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Benefits Reminder -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    O que você vai aprender
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Relembre tudo o que está incluído no seu curso
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Técnica Completa de Manicure Perfeita</h3>
+                            <p class="text-gray-600 text-sm">Domine o método combinado com brocas e tesoura para resultados profissionais</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Esmaltação em Gel</h3>
+                            <p class="text-gray-600 text-sm">Aprenda técnicas avançadas de aplicação e acabamento perfeito</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Alinhamento de Lâmina</h3>
+                            <p class="text-gray-600 text-sm">Técnica diferenciada para um acabamento impecável</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">50+ Aulas em Vídeo</h3>
+                            <p class="text-gray-600 text-sm">Conteúdo completo com explicações detalhadas passo a passo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Certificado Profissional</h3>
+                            <p class="text-gray-600 text-sm">Comprove sua qualificação com nosso certificado reconhecido</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="bg-custom-brown text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Acesso por 1 Ano</h3>
+                            <p class="text-gray-600 text-sm">Estude no seu ritmo com acesso completo por 12 meses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-custom-brown text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <i class="fas fa-headset text-5xl sm:text-6xl mb-6 pulse"></i>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                    Precisa de Ajuda?
+                </h2>
+                <p class="text-lg sm:text-xl opacity-90 mb-8">
+                    Nossa equipe está pronta para te ajudar em qualquer dúvida sobre o curso
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6 sm:gap-8">
+           
+                
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 sm:p-8 backdrop-blur-lg">
+                    <i class="fas fa-envelope text-3xl sm:text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">E-mail</h3>
+                    <p class="opacity-90 mb-4">Envie sua dúvida por e-mail</p>
+                    <a href="mailto:contato@giselevarela.com.br" class="bg-white text-custom-brown px-6 py-3 rounded-full font-semibold btn-hover">
+                        Enviar E-mail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                    © 2025 Código da Manicure. Todos os direitos reservados.
+                </p>
+                <div class="flex justify-center space-x-4 sm:space-x-6">
+                    <a href="https://www.instagram.com/giselevarelas/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BfA2badZi/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@giselevarelas" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl sm:text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Confetti effect (optional)
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#f0932b', '#eb4d4b', '#6c5ce7'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-10px';
+                confetti.style.opacity = Math.random();
+                confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.zIndex = '9999';
+                
+                document.body.appendChild(confetti);
+                
+                const fallAnimation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: 'translateY(100vh) rotate(360deg)', opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                });
+                
+                fallAnimation.onfinish = () => confetti.remove();
+            }
+        }
+
+        // Trigger confetti on page load
+        window.addEventListener('load', () => {
+            setTimeout(createConfetti, 1000);
+        });
+    </script>
+</body>
+</html>
