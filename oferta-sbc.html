@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando para Oferta Especial | Código da Manicure</title>
+    <meta name="description" content="Aguarde, você será redirecionado para uma oferta especial em instantes">
+    
+    <!-- Preload da imagem crítica do logo -->
+    <link rel="preload" href="images/LogoPreto.png" as="image" type="image/png">
+    
+    <!-- Resource hints para melhor performance -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D49KW677TX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D49KW677TX');
+    </script>
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+        }
+        
+        .redirect-gradient {
+            background: linear-gradient(135deg, #ac5a2e 0%, #8b4513 100%);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .countdown-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#ffffff 0deg, #ffffff 0deg, transparent 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            z-index: 10;
+        }
+        
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-dots {
+            display: inline-block;
+        }
+        
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-brown': '#ac5a2e',
+                        'custom-gray': '#f5f5f5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-gray">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg py-2 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center">
+                <!-- Logo -->
+                <div class="text-center">
+                    <div class="logo">
+                        <img src="images/LogoPreto.png" 
+                             alt="Logo O Código da Manicure" 
+                             class="mx-auto" 
+                             width="120" 
+                             height="80" 
+                             decoding="async">
+                        <p class="text-xs text-gray-600 tracking-wider font-bold hidden sm:block">O código da Manicure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Redirect Hero Section -->
+    <section class="redirect-gradient min-h-screen flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <div class="mb-8">
+                <i class="fas fa-gift text-6xl sm:text-8xl text-yellow-300 pulse mb-6"></i>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                🎁 Oferta Especial Aguardando! 🎁
+            </h1>
+            
+            <p class="text-lg sm:text-xl mb-8 opacity-90">
+                Aguarde, você será redirecionado para uma <strong>oferta exclusiva</strong><br>
+                em alguns instantes<span class="loading-dots"></span>
+            </p>
+            
+            <!-- Countdown Container -->
+            <div class="bg-white bg-opacity-20 rounded-3xl p-8 sm:p-12 backdrop-blur-lg mb-8">
+                <h2 class="text-xl sm:text-2xl font-bold mb-8">
+                    <i class="fas fa-clock mr-2"></i>
+                    Redirecionamento automático em:
+                </h2>
+                
+                <!-- Countdown Circle -->
+                <div class="countdown-circle mb-6">
+                    <div id="countdown" class="countdown-number">3</div>
+                </div>
+                
+                <div class="flex items-center justify-center gap-4 text-lg opacity-90">
+                    <i class="fas fa-spinner spinner"></i>
+                    <span>Preparando sua oferta especial...</span>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-3 mb-6">
+                <div id="progress-bar" class="bg-yellow-300 h-3 rounded-full transition-all duration-1000 ease-linear" style="width: 0%"></div>
+            </div>
+            
+            <p class="text-sm opacity-75">
+                Caso não seja redirecionado automaticamente, 
+                <a href="https://pay.kiwify.com.br/RXprD9G" class="underline hover:text-yellow-300 transition-colors">clique aqui</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                    © 2025 Código da Manicure. Todos os direitos reservados.
+                </p>
+                <div class="flex justify-center space-x-4 sm:space-x-6">
+                    <a href="https://www.instagram.com/giselevarelas/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BfA2badZi/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@giselevarelas" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl sm:text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown and redirect functionality
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        const progressBar = document.getElementById('progress-bar');
+        const redirectUrl = 'https://pay.kiwify.com.br/RXprD9G';
+        
+        // Update progress bar
+        function updateProgress() {
+            const progress = ((3 - countdown) / 3) * 100;
+            progressBar.style.width = progress + '%';
+        }
+        
+        // Countdown timer
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            updateProgress();
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                countdownElement.textContent = '0';
+                progressBar.style.width = '100%';
+                
+                // Add a small delay before redirect for better UX
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, 500);
+            }
+        }, 1000);
+        
+        // Initialize progress bar
+        updateProgress();
+        
+        // Fallback redirect in case something goes wrong
+        setTimeout(() => {
+            window.location.href = redirectUrl;
+        }, 5000);
+        
+        // Preload the redirect URL for faster navigation
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = redirectUrl;
+        document.head.appendChild(link);
+    </script>
+</body>
+</html>
