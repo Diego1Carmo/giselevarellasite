@@ -54,11 +54,10 @@ manicure perfeita com Gisele Varela">
             theme: {
                 extend: {
                     colors: {
-                        'custom-brown': '#ac5a2e',
-                        'custom-gray': '#f5f5f5',
-                        'bf-black': '#000000',
-                        'bf-gold': '#a67c15',
-                        'bf-dark-gold': '#8a5a0d'
+                        'custom-brown': '#c89116',
+                        'custom-brown-dark': '#b67101',
+                        'custom-black': '#000000',
+                        'custom-gray': '#f5f5f5'
                     }
                 }
             }
@@ -91,38 +90,14 @@ manicure perfeita com Gisele Varela">
                     img.classList.add('loaded');
                 });
             }
-
-            // Countdown Timer
-            const targetDate = new Date('2025-11-28T23:59:59').getTime();
-
-            const timerInterval = setInterval(function () {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
-
-                if (distance < 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById("countdown-timer").innerHTML = "OFERTA ENCERRADA";
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-            }, 1000);
         });
     </script>
 
 </head>
 
-<body class="bg-bf-black text-white">
+<body class="bg-custom-gray">
     <!-- Navigation -->
-    <nav class="bg-bf-black border-b border-bf-gold nav-shadow py-2 fixed w-full z-50">
+    <nav class="bg-white nav-shadow py-2 fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Mobile menu button -->
@@ -134,17 +109,19 @@ manicure perfeita com Gisele Varela">
 
                 <!-- Left Navigation - Desktop -->
                 <div class="hidden lg:flex space-x-8">
-                    <a href="#about" class="nav-link text-white hover:text-bf-gold font-medium text-sm">SOBRE</a>
+                    <a href="#about"
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">SOBRE</a>
                     <a href="#features"
-                        class="nav-link text-white hover:text-bf-gold font-medium text-sm">BENEFÍCIOS</a>
-                    <a href="#courses" class="nav-link text-white hover:text-bf-gold font-medium text-sm">CURSO</a>
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">BENEFÍCIOS</a>
+                    <a href="#courses"
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">CURSO</a>
                 </div>
 
                 <!-- Logo -->
                 <div class="text-center flex-1 lg:flex-none">
                     <div class="logo">
-                        <img src="images/LogoPreto.png" alt="Logo O Código da Manicure" class="mx-auto invert"
-                            width="120" height="80" decoding="async">
+                        <img src="images/LogoPreto.png" alt="Logo O Código da Manicure" class="mx-auto" width="120"
+                            height="80" decoding="async">
                         <p class="text-xs text-gray-600 tracking-wider font-bold hidden sm:block">O código da Manicure
                         </p>
                     </div>
@@ -153,13 +130,14 @@ manicure perfeita com Gisele Varela">
                 <!-- Right Navigation - Desktop -->
                 <div class="hidden lg:flex space-x-8">
                     <a href="#testimonials"
-                        class="nav-link text-white hover:text-bf-gold font-medium text-sm">DEPOIMENTOS</a>
-                    <a href="#faq" class="nav-link text-white hover:text-bf-gold font-medium text-sm">DÚVIDAS</a>
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DEPOIMENTOS</a>
+                    <a href="#faq"
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DÚVIDAS</a>
                 </div>
 
                 <!-- CTA Button Mobile -->
                 <div class="lg:hidden">
-                    <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank"
+                    <a href="https://pay.kiwify.com.br/8FamMkc" target="_blank"
                         class="bg-custom-brown text-white px-4 py-2 rounded text-sm font-medium">
                         COMPRAR
                     </a>
@@ -177,64 +155,47 @@ manicure perfeita com Gisele Varela">
                         class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">CURSO</a>
                     <a href="#testimonials"
                         class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">DEPOIMENTOS</a>
-                    <a href="#faq" class="nav-link text-white hover:text-bf-gold font-medium text-sm">DÚVIDAS</a>
+                    <a href="#faq"
+                        class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DÚVIDAS</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-bf-black pt-24 sm:pt-32 lg:pt-40 pb-8 sm:pb-12 lg:pb-0">
+    <section class="bg-custom-black pt-24 sm:pt-32 lg:pt-40 pb-8 sm:pb-12 lg:pb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <h1
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-light text-bf-gold leading-tight mb-6 sm:mb-8">
-                    <strong>Domine a técnica profissional de<br class="hidden sm:block">
-                        <span class="text-white">manicure perfeita</span></strong>
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6 sm:mb-8">
+                    <span class="text-custom-brown">BLACK FRIDAY EXCLUSIVA!</span><br class="hidden sm:block">
+                    <span class="text-white">Domine a técnica profissional de manicure perfeita</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8 sm:mb-10 px-4">
-                    Transforme sua paixão em uma carreira lucrativa com o método que já mudou a vida de muitas manicures
+                <p class="text-lg sm:text-xl text-white max-w-2xl mx-auto mb-4 px-4">
+                    <strong>Oferta por tempo limitado!</strong> Aprenda uma nova técnica e aumente sua renda ainda neste
+                    ano.
                 </p>
-
-                <!-- Countdown Timer -->
-                <div class="mb-8">
-                    <p class="text-bf-gold font-bold text-xl mb-4 uppercase tracking-widest">Oferta Exclusiva Black
-                        Friday</p>
-                    <div id="countdown-timer" class="flex justify-center gap-2 sm:gap-4 mb-4">
-                        <div
-                            class="flex flex-col items-center bg-gray-900 border border-bf-gold p-2 sm:p-3 rounded-lg min-w-[70px] sm:min-w-[80px]">
-                            <span id="days" class="text-2xl sm:text-3xl font-bold text-bf-gold">00</span>
-                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase">Dias</span>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gray-900 border border-bf-gold p-2 sm:p-3 rounded-lg min-w-[70px] sm:min-w-[80px]">
-                            <span id="hours" class="text-2xl sm:text-3xl font-bold text-bf-gold">00</span>
-                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase">Horas</span>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gray-900 border border-bf-gold p-2 sm:p-3 rounded-lg min-w-[70px] sm:min-w-[80px]">
-                            <span id="minutes" class="text-2xl sm:text-3xl font-bold text-bf-gold">00</span>
-                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase">Minutos</span>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gray-900 border border-bf-gold p-2 sm:p-3 rounded-lg min-w-[70px] sm:min-w-[80px]">
-                            <span id="seconds" class="text-2xl sm:text-3xl font-bold text-bf-gold">00</span>
-                            <span class="text-[10px] sm:text-xs text-gray-400 uppercase">Segundos</span>
-                        </div>
+                <div id="countdown"
+                    class="text-white text-center mb-8 bg-custom-brown-dark p-4 rounded-lg max-w-md mx-auto">
+                    <p class="text-sm mb-2">⏰ OFERTA TERMINA EM:</p>
+                    <div class="flex justify-center gap-4 text-2xl font-bold">
+                        <div><span id="days">00</span><span class="text-sm block">DIAS</span></div>
+                        <div><span id="hours">00</span><span class="text-sm block">HORAS</span></div>
+                        <div><span id="minutes">00</span><span class="text-sm block">MIN</span></div>
+                        <div><span id="seconds">00</span><span class="text-sm block">SEG</span></div>
                     </div>
-                    <p class="text-white font-medium text-sm uppercase tracking-wider">Oferta por tempo limitado</p>
                 </div>
 
                 <a href="#about"
-                    class="bg-bf-gold text-black px-6 sm:px-8 py-3 sm:py-4 rounded font-bold tracking-wider hover:bg-bf-dark-gold transition-colors btn-hover text-sm sm:text-base">
-                    SAIBA MAIS
+                    class="bg-custom-brown text-black px-6 sm:px-8 py-3 sm:py-4 rounded font-bold tracking-wider hover:bg-custom-brown-dark transition-colors text-sm sm:text-base">
+                    APROVEITAR OFERTA BLACK FRIDAY
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Images Section -->
-    <section class="py-8 sm:py-12 lg:py-16 bg-black">
+    <section class="py-8 sm:py-12 lg:py-16 bg-custom-gray">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Left Image - Nail technician working (takes 3 columns) -->
@@ -249,7 +210,7 @@ manicure perfeita com Gisele Varela">
                 <!-- Right Image - Nail polish display (takes 2 columns) -->
                 <div class="md:col-span-2 relative overflow-hidden rounded-lg">
                     <div class="aspect-w-4 aspect-h-3">
-                        <img src="images/foto2.webp" alt="Professional nail polish collection"
+                        <img style="object-position: top;" src="images/fotoGisele.webp" alt="Professional nail polish collection"
                             class="w-full h-64 sm:h-80 lg:h-96 object-cover" width="400" height="400" loading="lazy"
                             decoding="async" />
                     </div>
@@ -259,12 +220,11 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-black">
+    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-bf-gold">Sobre o Curso
-                </h2>
-                <p class="text-gray-300 max-w-3xl mx-auto px-4">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Sobre o Curso</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
                     O Código da Manicure é o curso mais completo para quem deseja se tornar uma profissional de
                     excelência no mercado de beleza.
                 </p>
@@ -273,46 +233,46 @@ manicure perfeita com Gisele Varela">
             <div class="flex flex-col lg:flex-row gap-8 sm:gap-12 items-center">
                 <div class="lg:w-1/2 w-full">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                        <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
                             <div
                                 class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
                                 <i class="fas fa-gem text-custom-brown text-xl sm:text-2xl"></i>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">Aprendizagem da técnica</h3>
-                            <p class="text-gray-300 text-sm">
-                                Aprenda uma nova técnica e aumente sua renda ainda neste ano.
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Técnica Profissional</h3>
+                            <p class="text-gray-600 text-sm">
+                                Domine o método completo de cuticulagem com tesoura e técnicas avançadas.
                             </p>
                         </div>
 
-                        <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
                             <div
                                 class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
-                                <i class="fas fa-video text-bf-gold text-xl sm:text-2xl"></i>
+                                <i class="fas fa-video text-custom-brown text-xl sm:text-2xl"></i>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">Aulas Práticas</h3>
-                            <p class="text-gray-300 text-sm">
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Aulas Práticas</h3>
+                            <p class="text-gray-600 text-sm">
                                 Vídeo-aulas para perfeito aprendizado.
                             </p>
                         </div>
 
-                        <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
                             <div
                                 class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
-                                <i class="fas fa-users text-bf-gold text-xl sm:text-2xl"></i>
+                                <i class="fas fa-users text-custom-brown text-xl sm:text-2xl"></i>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">Grupo VIP</h3>
-                            <p class="text-gray-300 text-sm">
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Grupo VIP</h3>
+                            <p class="text-gray-600 text-sm">
                                 Grupo exclusivo com outras alunas e suporte direto com Gisele Varela.
                             </p>
                         </div>
 
-                        <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
                             <div
                                 class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
-                                <i class="fas fa-certificate text-bf-gold text-xl sm:text-2xl"></i>
+                                <i class="fas fa-certificate text-custom-brown text-xl sm:text-2xl"></i>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">Certificado</h3>
-                            <p class="text-gray-300 text-sm">
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Certificado</h3>
+                            <p class="text-gray-600 text-sm">
                                 Receba um certificado profissional que comprova sua qualificação.
                             </p>
                         </div>
@@ -320,50 +280,49 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <div class="lg:w-1/2 w-full mt-8 lg:mt-0">
-                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-bf-gold">O método mais completo do
-                        mercado</h3>
-                    <p class="text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">O método mais completo do mercado</h3>
+                    <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                         Desenvolvido por especialistas com anos de experiência, o Código da Manicure oferece um método
                         passo a passo para você dominar as técnicas mais requisitadas no mercado.
                     </p>
 
                     <div class="space-y-3 sm:space-y-4 pb-10">
                         <div class="flex items-start gap-3 sm:gap-4">
-                            <div class="bg-bf-gold text-black py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
                                 <i class="fas fa-check text-xs sm:text-sm"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-sm sm:text-base">Aulas 100% online</h4>
-                                <p class="text-gray-300 text-xs sm:text-sm">Assista quando e onde quiser, no seu ritmo.
+                                <p class="text-gray-600 text-xs sm:text-sm">Assista quando e onde quiser, no seu ritmo.
                                 </p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-3 sm:gap-4">
-                            <div class="bg-bf-gold text-black py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
                                 <i class="fas fa-check text-xs sm:text-sm"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-sm sm:text-base">Acesso por um ano</h4>
-                                <p class="text-gray-300 text-xs sm:text-sm">Tenha acesso a todo o conteúdo por um ano.
+                                <p class="text-gray-600 text-xs sm:text-sm">Tenha acesso a todo o conteúdo por um ano.
                                 </p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-3 sm:gap-4">
-                            <div class="bg-bf-gold text-black py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
                                 <i class="fas fa-check text-xs sm:text-sm"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-sm sm:text-base">Atualizações gratuitas</h4>
-                                <p class="text-gray-300 text-xs sm:text-sm">Receba novos conteúdos sem custo adicional
+                                <p class="text-gray-600 text-xs sm:text-sm">Receba novos conteúdos sem custo adicional
                                     dentro do período de um ano.</p>
                             </div>
                         </div>
                     </div>
 
-                    <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank"
-                        class="mt-6 sm:mt-8 bg-bf-gold text-black font-bold py-3 px-6 sm:px-8 rounded-full btn-hover text-sm sm:text-base hover:bg-bf-dark-gold">
+                    <a href="https://pay.kiwify.com.br/8FamMkc" target="_blank"
+                        class="mt-6 sm:mt-8 bg-custom-brown text-white font-semibold py-3 px-6 sm:px-8 rounded-full btn-hover text-sm sm:text-base">
                         <i class="fas fa-info-circle mr-2"></i> Quero comprar
                     </a>
                 </div>
@@ -372,48 +331,47 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-12 sm:py-16 lg:py-20 bg-black">
+    <section id="features" class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-bf-gold">Benefícios
-                    Exclusivos</h2>
-                <p class="text-gray-300 max-w-3xl mx-auto px-4">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Benefícios Exclusivos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
                     Tudo o que você precisa para se tornar uma manicure profissional de sucesso
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover">
                     <div
                         class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                         <i class="fas fa-cut text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Aperfeiçoamento da técnica</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">
-                        Domine uma técnica profissional para brilhar nas festas de fim de ano e fidelizar clientes
-                        durante todo o próximo ano.
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Técnica Profissional</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Domine o método completo de Manicure Perfeita combinada utilizando brocas e tesoura, Alinhamento
+                        de lâmina e Esmaltação em gel. Aprenda desde o fundamento até a técnica avançada!
                     </p>
                 </div>
 
-                <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover">
                     <div
                         class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                         <i class="fas fa-hand-holding-heart text-xl sm:text-2xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Clientes Satisfeitas</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">
+                    <p class="text-gray-600 text-sm sm:text-base">
                         Aprenda a entregar resultados que fazem suas clientes voltarem sempre e indicarem seu trabalho
                         para amigas.
                     </p>
                 </div>
 
-                <div class="bg-gray-900 border border-bf-gold p-6 sm:p-8 rounded-2xl card-hover">
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover md:col-span-2 lg:col-span-1">
                     <div
                         class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
                         <i class="fas fa-chart-line text-xl sm:text-2xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Aumento de Renda</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">
+                    <p class="text-gray-600 text-sm sm:text-base">
                         Estratégias comprovadas para aumentar seus ganhos e transformar seu talento em um negócio
                         lucrativo.
                     </p>
@@ -423,86 +381,84 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="py-12 sm:py-16 lg:py-20 bg-black">
+    <section id="courses" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20">
             <div class="lg:w-1/2 w-full">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-bf-gold">O Curso</h2>
-                <p class="text-gray-300 pb-2 text-sm sm:text-base">
-                    Um curso completo desenvolvido para formar manicures de excelência.</p>
-                <p class="text-gray-300 pb-2 text-sm sm:text-base">
-                    O Código da Manicure é um curso completo e prático, criado para quem deseja aprender do zero ou
-                    aperfeiçoar sua técnica.
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">O Curso</h2>
+                <div class="bg-custom-brown text-black p-4 rounded-lg mb-4">
+                    <p class="font-bold text-lg">🎯 OFERTA BLACK FRIDAY EXCLUSIVA</p>
+                </div>
+                <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    <strong>Para quem está começando:</strong> Aprenda uma nova técnica para aumentar sua renda ainda
+                    este ano e garantir resultados duradouros no próximo ano.
                 </p>
-                <p class="text-gray-300 pb-2 text-sm sm:text-base">Aqui você vai dominar a técnica de Manicure Perfeita
-                    e outras práticas que fazem a diferença no acabamento profissional.</p>
-                <p class="text-gray-300 pb-2 text-sm sm:text-base">
-                    Seja para começar sua jornada como manicure, oferecer um serviço mais valorizado e moderno ou
-                    aumentar sua renda.
+                <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    <strong>Para quem quer se aperfeiçoar:</strong> Domine uma técnica profissional para brilhar nas
+                    festas de fim de ano e fidelizar clientes durante todo o próximo ano.
                 </p>
-                <p class="text-gray-300 pb-2 text-sm sm:text-base">
-                    Esse curso foi feito para te preparar com segurança e técnica.
+                <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    Aperfeiçoe sua técnica e transforme dezembro em seu mês mais lucrativo.
+                </p>
+                <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    Esse curso foi feito para te preparar com segurança e técnica para alcançar seus objetivos ainda
+                    este ano.
                 </p>
                 <img src="images/mockup.webp" alt="imagem mockup do curso" />
             </div>
 
             <div class="lg:w-1/2 w-full mt-8 lg:mt-0">
                 <!-- Course 1 -->
-                <div class="bg-gray-900 border-2 border-bf-gold rounded-2xl overflow-hidden shadow-lg card-hover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
                     <div class="relative">
                         <img src="images/bg.png" alt="Curso Básico" class="w-full h-40 sm:h-48 object-cover" width="800"
                             height="300" loading="lazy" decoding="async">
-                        <div class="absolute top-2 sm:top-4 right-2 sm:right-4 flex flex-col items-end gap-1">
-                            <div
-                                class="bg-bf-gold text-black px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
-                                BLACK FRIDAY
-                            </div>
-                            <div
-                                class="bg-gray-800 text-white px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold">
-                                O CÓDIGO DA MANICURE
-                            </div>
+                        <div
+                            class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-custom-brown text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
+                            O CÓDIGO DA MANICURE
                         </div>
                     </div>
                     <div class="p-4 sm:p-6">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-2">
-                            <h3 class="text-lg sm:text-xl font-bold text-center text-white">Manicure Perfeita</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-center">Manicure Perfeita</h3>
                             <div class="text-center sm:text-right">
+                                <div
+                                    class="bg-custom-black text-custom-brown px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
+                                    🔥 BLACK FRIDAY EXCLUSIVA
+                                </div>
                                 <div class="text-gray-400 line-through text-sm sm:text-base mb-1">
                                     De R$ 497,00
                                 </div>
                                 <div
-                                    class="bg-bf-gold text-black mx-20 sm:mx-0 px-3 py-1 rounded-full text-lg sm:text-xl font-bold text-center sm:text-right">
+                                    class="bg-custom-brown text-black mx-20 sm:mx-0 px-3 py-1 rounded-full text-lg sm:text-xl font-bold text-center sm:text-right">
                                     Por R$ 97,90
                                 </div>
-                                <div class="text-bf-gold text-xs font-bold mt-1 text-center sm:text-right uppercase">
-                                    Oferta exclusiva Black Friday
-                                </div>
                                 <div
-                                    class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold mt-1 inline-block">
-                                    80% OFF
+                                    class="bg-custom-brown-dark text-white px-2 py-1 rounded-full text-xs font-bold mt-1 inline-block">
+                                    80% OFF - TEMPO LIMITADO!
                                 </div>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
                             Domine as técnicas profissionais de manicure e comece a trabalhar em poucas semanas.
                         </p>
 
                         <div class="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                             <div class="flex items-center">
-                                <i class="fas fa-check-circle text-bf-gold mr-2 text-sm"></i>
-                                <span class="text-xs sm:text-sm text-gray-300">50+ aulas em vídeo</span>
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">50+ aulas em vídeo</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="fas fa-check-circle text-bf-gold mr-2 text-sm"></i>
-                                <span class="text-xs sm:text-sm text-gray-300">Certificado profissional</span>
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">Certificado profissional</span>
                             </div>
                             <div class="flex items-center">
-                                <i class="fas fa-check-circle text-bf-gold mr-2 text-sm"></i>
-                                <span class="text-xs sm:text-sm text-gray-300">Acesso por um ano</span>
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">Acesso por um ano</span>
                             </div>
                         </div>
                         <div class="text-center py-5 sm:text-left">
-                            <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank"
-                                class="w-full px-8 bg-bf-gold text-black font-bold py-3 rounded-full btn-hover text-sm sm:text-base hover:bg-bf-dark-gold">
+                            <a href="https://pay.kiwify.com.br/8FamMkc" target="_blank"
+                                class="w-full px-8 bg-custom-brown text-white font-semibold py-3 rounded-full btn-hover text-sm sm:text-base">
                                 <i class="fas fa-shopping-cart mr-2"></i> Comprar agora
                             </a>
                         </div>
@@ -512,30 +468,11 @@ manicure perfeita com Gisele Varela">
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <!-- <section class="py-12 sm:py-16 lg:py-12 bg-bf-gold text-black">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl md:text-4xl font-bold mb-6">
-                Sorteio Especial para as <span class="text-black underline">Primeiras 24h!</span>
-            </h2>
-            <p class="text-xl max-w-5xl mx-auto mb-0 opacity-90">
-                Quem se inscrever nas primeiras 24 horas vai participar automaticamente do sorteio de 2 kits exclusivos
-                de produtos da <strong>PFM!</strong>
-                <br><br>
-                Kit completo de produtos da PFM contendo:<br>
-                Higienizador, desidratador, adesivador e gel base.
-                <br><br>É a chance perfeita de começar sua jornada com os produtos ideais para aplicar tudo o que
-                aprender no curso!
-
-            </p>
-
-        </div>
-    </section> -->
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-black">
+    <section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-bf-gold">Depoimentos</h2>
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Depoimentos</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto px-4">
                     Veja o que nossas alunas estão dizendo sobre o Código da Manicure
                 </p>
@@ -543,11 +480,11 @@ manicure perfeita com Gisele Varela">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <div
-                            class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-bf-gold bg-opacity-20 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-user text-bf-gold text-lg sm:text-2xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-custom-brown text-lg sm:text-2xl"></i>
                         </div>
                         <div class="ml-3 sm:ml-4">
                             <h4 class="font-bold text-sm sm:text-base">Renata Magro</h4>
@@ -561,7 +498,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-1">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "
                             Testemunho sobre meu curso com Gisele Varela:
 
@@ -598,7 +535,7 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-6">
                         <div
                             class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
@@ -616,7 +553,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-2">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "O curso de Manicure perfeita clássica combinada com a Gisele foi simplesmente
                             transformador! Eu já tinha alguma experiência com unhas, mas nunca tinha aprendido tantas
                             técnicas detalhadas e atualizadas como o curso da Gi, tem uma didática incrível, explica
@@ -636,7 +573,7 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-6">
                         <div
                             class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
@@ -654,7 +591,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-3">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "Nesse exato momento eu poderia estar escrevendo, mas eu decidi fazer um vídeo..."<br />
                             <span
                                 class="video-link cursor-pointer text-custom-brown hover:text-custom-brown-dark underline"
@@ -672,7 +609,7 @@ manicure perfeita com Gisele Varela">
                     </div>
                 </div>
                 <!-- Testimonial 4 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-6">
                         <div
                             class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
@@ -690,7 +627,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-4">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "O curso para mim um divisor de águas para mim. A partir daí todo o processo para remover,
                             preparar as cutículas, as unhas e esmaltar, ficou bem mais claro.
                             A técnica foi ensinada com uma didática impecável e, além disso, recebi dicas importantes.
@@ -707,7 +644,7 @@ manicure perfeita com Gisele Varela">
                     </div>
                 </div>
                 <!-- Testimonial 5 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-6">
                         <div
                             class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
@@ -725,7 +662,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-5">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "Quando eu fui atrás pra fazer o curso eu estava buscando um aperfeiçoamento na esmaltação
                             em gel, e claro q sempre pensei em fazer com a Gi!
                             O curso foi super bem explicado, eu nunca tinha pego em uma tesoura e no mesmo dia já fui
@@ -744,7 +681,7 @@ manicure perfeita com Gisele Varela">
                     </div>
                 </div>
                 <!-- Testimonial 6 -->
-                <div class="bg-gray-900 border border-bf-gold p-8 rounded-2xl testimonial-card">
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
                     <div class="flex items-center mb-6">
                         <div
                             class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
@@ -762,7 +699,7 @@ manicure perfeita com Gisele Varela">
                         </div>
                     </div>
                     <div class="testimonial-text" id="testimonial-6">
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-600 italic">
                             "Sobre o curso da Gisele Varela, ele foi transformador para minha vida, um divisor de águas,
                             a Gi é sensacional tanto quanto pessoa , como profissional, extremamente cuidadosa e
                             didática com suas explicações. Amei o curso de manicure perfeita , através dela minha vida
@@ -787,11 +724,11 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- Results Section -->
-    <section class="results py-12 sm:py-16 lg:py-20 bg-bf-gold text-black">
+    <section class="results py-12 sm:py-16 lg:py-20 bg-custom-black border-t-4 border-custom-brown text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Resultados Comprovados</h2>
-                <p class="text-black/80 max-w-3xl mx-auto px-4">
+                <p class="text-white/80 max-w-3xl mx-auto px-4">
                     Veja os resultados que nossas alunas estão alcançando
                 </p>
             </div>
@@ -804,7 +741,7 @@ manicure perfeita com Gisele Varela">
                         <i class="fas fa-chart-line text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold mb-3">Crescimento Profissional</h3>
-                    <p class="text-black/90 text-sm sm:text-base leading-relaxed">Desenvolva suas habilidades e
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Desenvolva suas habilidades e
                         conquiste reconhecimento no mercado de manicure</p>
                 </div>
 
@@ -815,7 +752,7 @@ manicure perfeita com Gisele Varela">
                         <i class="fas fa-users text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold mb-3">Clientela Fidelizada</h3>
-                    <p class="text-black/90 text-sm sm:text-base leading-relaxed">Aprenda técnicas que garantem a
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Aprenda técnicas que garantem a
                         satisfação e retorno dos seus clientes</p>
                 </div>
 
@@ -826,14 +763,14 @@ manicure perfeita com Gisele Varela">
                         <i class="fas fa-star text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-xl sm:text-2xl font-bold mb-3">Excelência Técnica</h3>
-                    <p class="text-black/90 text-sm sm:text-base leading-relaxed">Domine as melhores práticas e técnicas
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Domine as melhores práticas e técnicas
                         avançadas de manicure profissional</p>
                 </div>
             </div>
 
             <div class="mt-12 sm:mt-16 text-center">
-                <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank"
-                    class="inline-block bg-black text-bf-gold font-bold py-4 px-8 sm:px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <a href="https://pay.kiwify.com.br/8FamMkc" target="_blank"
+                    class="inline-block bg-white text-custom-brown font-bold py-4 px-8 sm:px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                     <i class="fas fa-rocket mr-2"></i> Quero Transformar Minha Carreira
                 </a>
             </div>
@@ -841,11 +778,10 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-12 sm:py-16 lg:py-20 bg-black">
+    <section id="faq" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
-                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-bf-gold">Perguntas
-                    Frequentes</h2>
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto px-4">
                     Tire suas dúvidas sobre o Código da Manicure
                 </p>
@@ -853,14 +789,14 @@ manicure perfeita com Gisele Varela">
 
             <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6">
                 <!-- FAQ Item -->
-                <div class="faq-item bg-gray-900 border border-bf-gold rounded-lg overflow-hidden">
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
                     <button
                         class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
                         <h3 class="font-bold">Preciso ter experiência prévia para fazer o curso?</h3>
                         <i class="fas fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
                     <div class="faq-content px-6">
-                        <p class="text-gray-300 pb-6">
+                        <p class="text-gray-600 pb-6">
                             Não! O curso foi desenvolvido tanto para iniciantes que nunca tiveram contato com trabalho
                             de manicure quanto para profissionais que querem aperfeiçoar suas técnicas. Começamos do
                             zero e avançamos gradualmente para técnicas profissionais.
@@ -869,14 +805,14 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <!-- FAQ Item -->
-                <div class="faq-item bg-gray-900 border border-bf-gold rounded-lg overflow-hidden">
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
                     <button
                         class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
                         <h3 class="font-bold">Quanto tempo tenho acesso ao curso?</h3>
                         <i class="fas fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
                     </button>
                     <div class="faq-content px-6">
-                        <p class="text-gray-300 pb-6">
+                        <p class="text-gray-600 pb-6">
                             O acesso dura por um ano! Nesse período você pode assistir às aulas quantas vezes quiser, no
                             seu próprio ritmo, e terá direito a todas as atualizações futuras do curso sem custo
                             adicional.
@@ -885,14 +821,14 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <!-- FAQ Item -->
-                <div class="faq-item bg-gray-900 border border-bf-gold rounded-lg overflow-hidden">
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
                     <button
                         class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
                         <h3 class="font-bold">Como funciona a grupo VIP?</h3>
                         <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div class="faq-content px-6">
-                        <p class="text-gray-300 pb-6">
+                        <p class="text-gray-600 pb-6">
                             Após a inscrição, você receberá um convite para entrar em nosso grupo exclusivo no WhatsApp,
                             onde poderá tirar dúvida, compartilhar experiências e networking com outras alunas.
                         </p>
@@ -900,14 +836,14 @@ manicure perfeita com Gisele Varela">
                 </div>
 
                 <!-- FAQ Item -->
-                <div class="faq-item bg-gray-900 border border-bf-gold rounded-lg overflow-hidden">
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
                     <button
                         class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
                         <h3 class="font-bold">Quais materiais preciso para começar?</h3>
                         <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div class="faq-content px-6">
-                        <p class="text-gray-300 pb-6">
+                        <p class="text-gray-600 pb-6">
                             No primeiro módulo detalhamos todos os materiais básicos necessários (com marcas
                             recomendadas) e alternativas mais acessíveis. Você pode começar com um kit básico e ir
                             expandindo conforme avança no curso.
@@ -921,24 +857,26 @@ manicure perfeita com Gisele Varela">
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-bf-gold text-black">
+    <section class="py-12 sm:py-16 lg:py-20 bg-custom-black border-t-4 border-custom-brown text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="  text-3xl md:text-4xl font-bold mb-6">
-                Transforme sua paixão em <span class="text-black underline">resultados</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                <span class="text-custom-brown">BLACK FRIDAY:</span> Transforme sua paixão em <span
+                    class="text-custom-brown">resultados</span>
             </h2>
             <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90">
-                Comece hoje mesmo sua jornada como manicure profissional e dê o primeiro passo para conquistar sua
-                independência financeira fazendo o que ama.
+                Aproveite esta oferta exclusiva de Black Friday por tempo limitado! Comece hoje mesmo sua jornada como
+                manicure profissional e dê o primeiro passo para conquistar sua independência financeira fazendo o que
+                ama.
             </p>
-            <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank"
-                class="inline-block bg-black text-bf-gold px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-gray-900 transition-colors">
-                QUERO COMEÇAR AGORA
+            <a href="https://pay.kiwify.com.br/8FamMkc" target="_blank"
+                class="inline-block bg-custom-brown text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-custom-brown-dark transition-colors">
+                GARANTIR OFERTA BLACK FRIDAY - R$ 97,90
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-bf-gold text-white py-8 sm:py-12">
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <p class="text-gray-400 mb-4 text-sm sm:text-base">
@@ -1054,6 +992,32 @@ manicure perfeita com Gisele Varela">
                 });
             }
         });
+
+        // Countdown Timer to November 28, 2025
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const targetDate = new Date('2025-11-28T23:59:59-03:00').getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p class="text-lg font-bold">OFERTA ENCERRADA</p>';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
     </script>
 
     <!-- Video Modal -->
