@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código da Manicure | Manicure Perfeita</title>
+      <meta name="description" content="Domine a técnica profissional de
+manicure perfeita com Gisele Varela">
+
+    
+    <!-- Preload da imagem crítica do logo -->
+    <link rel="preload" href="images/LogoPreto.png" as="image" type="image/png">
+    
+    <!-- Resource hints para melhor performance -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- CSS crítico para otimização de imagens -->
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D49KW677TX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D49KW677TX');
+</script>
+    <style>
+        img {
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+        /* Otimização de renderização de imagens */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-brown': '#ac5a2e',
+                        'custom-gray': '#f5f5f5'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Script para otimização de carregamento de imagens -->
+    <script>
+        // Lazy loading com Intersection Observer
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            } else {
+                // Fallback para navegadores sem suporte
+                lazyImages.forEach(img => {
+                    img.classList.add('loaded');
+                });
+            }
+        });
+    </script>
+  
+</head>
+<body class="bg-custom-gray">
+    <!-- Navigation -->
+    <nav class="bg-white nav-shadow py-2 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-custom-brown focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Left Navigation - Desktop -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">SOBRE</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">BENEFÍCIOS</a>
+                     <a href="#courses" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">CURSO</a>
+                </div>
+                
+                <!-- Logo -->
+                <div class="text-center flex-1 lg:flex-none">
+                    <div class="logo">
+                        <img src="images/LogoPreto.png" 
+                             alt="Logo O Código da Manicure" 
+                             class="mx-auto" 
+                             width="120" 
+                             height="80" 
+                             decoding="async">
+                        <p class="text-xs text-gray-600 tracking-wider font-bold hidden sm:block">O código da Manicure</p>
+                    </div>
+                </div>
+                
+                <!-- Right Navigation - Desktop -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DEPOIMENTOS</a>
+                    <a href="#faq" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DÚVIDAS</a>
+                </div>
+                
+                <!-- CTA Button Mobile -->
+                <div class="lg:hidden">
+                    <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank" class="bg-custom-brown text-white px-4 py-2 rounded text-sm font-medium">
+                        COMPRAR
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">SOBRE</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">BENEFÍCIOS</a>
+                    <a href="#courses" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">CURSO</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm border-b border-gray-200 pb-2">DEPOIMENTOS</a>
+                    <a href="#faq" class="nav-link text-gray-700 hover:text-custom-brown font-medium text-sm">DÚVIDAS</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-24 sm:pt-32 lg:pt-40 pb-8 sm:pb-12 lg:pb-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-light text-gray-800 leading-tight mb-6 sm:mb-8">
+                    <strong>Domine a técnica profissional de<br class="hidden sm:block">
+                    <span class="text-gray-700">manicure perfeita</span></strong>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10 px-4">
+                    Transforme sua paixão em uma carreira lucrativa com o método que já mudou a vida de muitas manicures
+                </p>
+                
+                <a href="#about" class="bg-custom-brown text-white px-6 sm:px-8 py-3 sm:py-4 rounded font-medium tracking-wider hover:bg-opacity-90 transition-colors btn-hover text-sm sm:text-base">
+                    SAIBA MAIS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section class="py-8 sm:py-12 lg:py-16 bg-custom-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Left Image - Nail technician working (takes 3 columns) -->
+                <div class="md:col-span-3 relative overflow-hidden rounded-lg">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img 
+                            src="images/foto1.webp" 
+                            alt="Professional manicure technique" 
+                            class="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                            width="600"
+                            height="400"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </div>
+                </div>
+                
+                <!-- Right Image - Nail polish display (takes 2 columns) -->
+                <div class="md:col-span-2 relative overflow-hidden rounded-lg">
+                    <div class="aspect-w-4 aspect-h-3">
+                        <img 
+                            src="images/foto2.webp" 
+                            alt="Professional nail polish collection" 
+                            class="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                            width="400"
+                            height="400"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Sobre o Curso</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
+                    O Código da Manicure é o curso mais completo para quem deseja se tornar uma profissional de excelência no mercado de beleza.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 sm:gap-12 items-center">
+                <div class="lg:w-1/2 w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
+                            <div class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-gem text-custom-brown text-xl sm:text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Técnica Profissional</h3>
+                            <p class="text-gray-600 text-sm">
+                                Domine o método completo de cuticulagem com tesoura e técnicas avançadas.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
+                            <div class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-video text-custom-brown text-xl sm:text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Aulas Práticas</h3>
+                            <p class="text-gray-600 text-sm">
+                                Vídeo-aulas para perfeito aprendizado.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
+                            <div class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-users text-custom-brown text-xl sm:text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Grupo VIP</h3>
+                            <p class="text-gray-600 text-sm">
+                                Grupo exclusivo com outras alunas e suporte direto com Gisele Varela.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl card-hover">
+                            <div class="bg-custom-brown bg-opacity-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4">
+                                <i class="fas fa-certificate text-custom-brown text-xl sm:text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold mb-2">Certificado</h3>
+                            <p class="text-gray-600 text-sm">
+                                Receba um certificado profissional que comprova sua qualificação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 w-full mt-8 lg:mt-0">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">O método mais completo do mercado</h3>
+                    <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed">
+                        Desenvolvido por especialistas com anos de experiência, o Código da Manicure oferece um método passo a passo para você dominar as técnicas mais requisitadas no mercado.
+                    </p>
+                    
+                    <div class="space-y-3 sm:space-y-4 pb-10">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                                <i class="fas fa-check text-xs sm:text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm sm:text-base">Aulas 100% online</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">Assista quando e onde quiser, no seu ritmo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                                <i class="fas fa-check text-xs sm:text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm sm:text-base">Acesso por um ano</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">Tenha acesso a todo o conteúdo por um ano.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="bg-custom-brown text-white py-2 px-3 sm:px-4 rounded-full mt-1 flex-shrink-0">
+                                <i class="fas fa-check text-xs sm:text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm sm:text-base">Atualizações gratuitas</h4>
+                                <p class="text-gray-600 text-xs sm:text-sm">Receba novos conteúdos sem custo adicional dentro do período de um ano.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank" class="mt-6 sm:mt-8 bg-custom-brown text-white font-semibold py-3 px-6 sm:px-8 rounded-full btn-hover text-sm sm:text-base">
+                        <i class="fas fa-info-circle mr-2"></i> Quero comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Benefícios Exclusivos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
+                    Tudo o que você precisa para se tornar uma manicure profissional de sucesso
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover">
+                    <div class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                        <i class="fas fa-cut text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Técnica Profissional</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Domine o método completo de Manicure Perfeita combinada utilizando brocas e tesoura, Alinhamento de lâmina e Esmaltação em gel. Aprenda desde o fundamento até a técnica avançada!
+                    </p>
+                </div>
+                
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover">
+                    <div class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                        <i class="fas fa-hand-holding-heart text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Clientes Satisfeitas</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Aprenda a entregar resultados que fazem suas clientes voltarem sempre e indicarem seu trabalho para amigas.
+                    </p>
+                </div>
+                
+                <div class="bg-custom-gray p-6 sm:p-8 rounded-2xl card-hover md:col-span-2 lg:col-span-1">
+                    <div class="bg-custom-brown text-white w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                        <i class="fas fa-chart-line text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Aumento de Renda</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Estratégias comprovadas para aumentar seus ganhos e transformar seu talento em um negócio lucrativo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20">
+            <div class="lg:w-1/2 w-full">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">O Curso</h2>
+                <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    Um curso completo desenvolvido para formar manicures de excelência.</p>
+                    <p class="text-gray-600 pb-2 text-sm sm:text-base">
+                    O Código da Manicure é um curso completo e prático, criado para quem deseja aprender do zero ou aperfeiçoar sua técnica. 
+                    </p> 
+                    <p class="text-gray-600 pb-2 text-sm sm:text-base">Aqui você vai dominar a técnica de Manicure Perfeita e outras práticas que fazem a diferença no acabamento profissional.</p>
+                      <p class="text-gray-600 pb-2 text-sm sm:text-base">
+Seja para começar sua jornada como manicure, oferecer um serviço mais valorizado e moderno ou aumentar sua renda.
+</p>
+ <p class="text-gray-600 pb-2 text-sm sm:text-base">
+Esse curso foi feito para te preparar com segurança e técnica.
+                </p>
+                <img src="images/mockup.webp" alt="imagem mockup do curso"/>
+            </div>
+            
+            <div class="lg:w-1/2 w-full mt-8 lg:mt-0">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative">
+                        <img src="images/bg.png" 
+                             alt="Curso Básico" 
+                             class="w-full h-40 sm:h-48 object-cover"
+                             width="800"
+                             height="300"
+                             loading="lazy"
+                             decoding="async">
+                        <div class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-custom-brown text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
+                            O CÓDIGO DA MANICURE
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-2">
+                            <h3 class="text-lg sm:text-xl font-bold text-center">Manicure Perfeita</h3>
+                            <div class="text-center sm:text-right">
+                                <div class="text-gray-400 line-through text-sm sm:text-base mb-1">
+                                    De R$ 497,00
+                                </div>
+                                <div class="bg-custom-brown text-white mx-20 sm:mx-0 px-3 py-1 rounded-full text-lg sm:text-xl font-bold text-center sm:text-right">
+                                    Por R$ 197,00
+                                </div>
+                                <div class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold mt-1 inline-block">
+                                    60% OFF
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
+                            Domine as técnicas profissionais de manicure e comece a trabalhar em poucas semanas.
+                        </p>
+                        
+                        <div class="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">50+ aulas em vídeo</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">Certificado profissional</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-custom-brown mr-2 text-sm"></i>
+                                <span class="text-xs sm:text-sm">Acesso por um ano</span>
+                            </div>
+                        </div>
+                        <div class="text-center py-5 sm:text-left">
+                        <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank" class="w-full px-8 bg-custom-brown text-white font-semibold py-3 rounded-full btn-hover text-sm sm:text-base">
+                            <i class="fas fa-shopping-cart mr-2"></i> Comprar agora
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 sm:py-16 lg:py-12 bg-custom-brown text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-4xl font-bold mb-6">
+                Sorteio Especial para as <span class="text-amber-200">Primeiras 24h!</span>
+            </h2>
+            <p class="text-xl max-w-5xl mx-auto mb-0 opacity-90">
+                Quem se inscrever nas primeiras 24 horas vai participar automaticamente do sorteio de 2 kits exclusivos de produtos da <strong>PFM!</strong>
+                <br><br>
+                Kit completo de produtos da PFM contendo:<br>
+                Higienizador, desidratador, adesivador e gel base.
+                <br><br>É a chance perfeita de começar sua jornada com os produtos ideais para aplicar tudo o que aprender no curso!
+
+            </p>
+            
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Depoimentos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
+                    Veja o que nossas alunas estão dizendo sobre o Código da Manicure
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-custom-brown text-lg sm:text-2xl"></i>
+                        </div>
+                        <div class="ml-3 sm:ml-4">
+                            <h4 class="font-bold text-sm sm:text-base">Renata Magro</h4>
+                            <div class="flex text-yellow-300 text-xs sm:text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-1">
+                        <p class="text-gray-600 italic">
+                            "
+Testemunho sobre meu curso com Gisele Varela:
+
+Participar do curso com a Gisele Varela foi, sem dúvida, uma das experiências mais transformadoras da minha jornada profissional. Cada detalhe, cada técnica ensinada, cada palavra compartilhada por ela agregou muito valor não apenas à minha mesa, mas também à forma como ensino hoje.
+
+A Gisele é uma educadora diferenciada, daquelas que não passam apenas conteúdo — ela entrega excelência, ética e visão de futuro. A sensibilidade e a firmeza com que conduz o ensino tornam o aprendizado real, aplicável e inspirador.
+
+São Bernardo do Campo e toda a região do ABC são, sem dúvida, abençoados por terem uma profissional como ela atuando de forma tão intensa e generosa. É uma terra próspera e cheia de oportunidades, e ter a Gisele como referência por aí eleva ainda mais o nível da profissão.
+
+Eu saí desse curso com novas técnicas, uma mente renovada e, acima de tudo, um novo padrão de qualidade para a minha atuação. A Gisele foi um divisor de águas na minha carreira e carrego comigo não só o aprendizado, mas a honra de tê-la como mentora nessa etapa tão importante.
+
+Gratidão, Gisele. Que sua missão continue frutificando em muitas mesas, como frutificou na minha."
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-1', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        
+                        <span>@luacosmeticosc</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
+                            <i class="fas fa-user text-custom-brown text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Karyne Suellen</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-2">
+                        <p class="text-gray-600 italic">
+                            "O curso de Manicure perfeita clássica combinada com a Gisele foi simplesmente transformador! Eu já tinha alguma experiência com unhas, mas nunca tinha aprendido tantas técnicas detalhadas e atualizadas como o curso da Gi, tem uma didática incrível, explica tudo com muita paciência e clareza, e está sempre disposta a tirar dúvidas. O que mais me marcou foi o capricho nos acabamentos e a forma como ela ensina a valorizar cada detalhe do atendimento profissional. Hoje me sinto muito mais segura, aprimorei meu atendimento e fidelizei mais clientes. Com certeza foi um divisor de águas na minha carreira."
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-2', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                     
+                        <span>@karyne_suelen</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
+                            <i class="fas fa-user text-custom-brown text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Aline Suellen</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-3">
+                        <p class="text-gray-600 italic">
+                            "Nesse exato momento eu poderia estar escrevendo, mas eu decidi fazer um vídeo..."<br/>
+                            <span class="video-link cursor-pointer text-custom-brown hover:text-custom-brown-dark underline" onclick="openVideoModal('testimonial-video-3')">
+                                <i class="fas fa-play-circle mr-2"></i>Clique aqui para assistir o depoimento
+                            </span>
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-3', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        
+                        <span>@alinesuelen._</span>
+                    </div>
+                </div>
+                 <!-- Testimonial 4 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
+                            <i class="fas fa-user text-custom-brown text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Regina Fonseca</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-4">
+                        <p class="text-gray-600 italic">
+                            "O curso para mim  um divisor de águas para mim. A partir daí todo o processo para remover, preparar as cutículas, as unhas e esmaltar, ficou bem mais claro.
+ A técnica foi ensinada com uma didática impecável e, além disso, recebi dicas importantes.
+Mesmo pós curso pude contar com um suporte quando precisei, isso foi muito valioso para mim.
+Foi um investimento que valeu cada centavo. 
+Hoje me sinto mais confiante e preparada para os atendimentos."
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-4', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <span>@refonsecanaildesigner</span>
+                    </div>
+                </div>
+                 <!-- Testimonial 5 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
+                            <i class="fas fa-user text-custom-brown text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Yasmin Rollo</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-5">
+                        <p class="text-gray-600 italic">
+                            "Quando eu fui atrás pra fazer o curso eu estava buscando um aperfeiçoamento na esmaltação em gel, e claro q sempre pensei em fazer com a Gi!
+O curso foi super bem explicado, eu nunca tinha pego em uma tesoura e no mesmo dia já fui aplicando a técnica com perfeição!
+Hj dois anos depois de ter feito o curso eu só penso q foi a melhor coisa q eu fiz, eu amo a técnica da Manicure Perfeita e minhas clientes amam o resultado!
+A Gi é uma inspiração para mim e sou mt grata por a ter conhecido e por ter feito o curso com ela!"
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-5', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <span>@yasminrollonail</span>
+                    </div>
+                </div>
+                 <!-- Testimonial 6 -->
+                <div class="bg-custom-gray p-8 rounded-2xl testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-custom-brown bg-opacity-10 flex items-center justify-center">
+                            <i class="fas fa-user text-custom-brown text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Mara Ramos</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text" id="testimonial-6">
+                        <p class="text-gray-600 italic">
+                            "Sobre o curso da Gisele Varela, ele foi transformador para minha vida,  um divisor de águas, a Gi é sensacional tanto quanto pessoa ,  como profissional,  extremamente cuidadosa e didática com suas explicações. Amei o curso de manicure perfeita , através dela minha vida mudou, sou muito grata❤"
+                        </p>
+                    </div>
+                    <button class="expand-btn" onclick="toggleTestimonial('testimonial-6', this)">
+                        <i class="fas fa-chevron-down"></i> Ver mais
+                    </button>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <span>@mararamosnail</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!--<div class="mt-16 text-center">
+                <button class="bg-custom-brown text-white font-semibold py-3 px-8 rounded-full btn-hover">
+                    <i class="fas fa-comment-dots mr-2"></i> Ver mais depoimentos
+                </button>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results py-12 sm:py-16 lg:py-20 bg-custom-brown text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Resultados Comprovados</h2>
+                <p class="text-white/80 max-w-3xl mx-auto px-4">
+                    Veja os resultados que nossas alunas estão alcançando
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+                <div class="bg-white bg-opacity-15 p-6 sm:p-8 rounded-3xl text-center backdrop-blur-lg border border-white/20 hover:bg-opacity-20 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 bg-white bg-opacity-25 rounded-full flex items-center justify-center">
+                        <i class="fas fa-chart-line text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Crescimento Profissional</h3>
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Desenvolva suas habilidades e conquiste reconhecimento no mercado de manicure</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-15 p-6 sm:p-8 rounded-3xl text-center backdrop-blur-lg border border-white/20 hover:bg-opacity-20 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 bg-white bg-opacity-25 rounded-full flex items-center justify-center">
+                        <i class="fas fa-users text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Clientela Fidelizada</h3>
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Aprenda técnicas que garantem a satisfação e retorno dos seus clientes</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-15 p-6 sm:p-8 rounded-3xl text-center backdrop-blur-lg border border-white/20 hover:bg-opacity-20 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 bg-white bg-opacity-25 rounded-full flex items-center justify-center">
+                        <i class="fas fa-star text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Excelência Técnica</h3>
+                    <p class="text-white/90 text-sm sm:text-base leading-relaxed">Domine as melhores práticas e técnicas avançadas de manicure profissional</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 sm:mt-16 text-center">
+                <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank" class="inline-block bg-white text-custom-brown font-bold py-4 px-8 sm:px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-rocket mr-2"></i> Quero Transformar Minha Carreira
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 sm:py-16 lg:py-20 bg-custom-gray">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto px-4">
+                    Tire suas dúvidas sobre o Código da Manicure
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6">
+                <!-- FAQ Item -->
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <h3 class="font-bold">Preciso ter experiência prévia para fazer o curso?</h3>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-600 pb-6">
+                            Não! O curso foi desenvolvido tanto para iniciantes que nunca tiveram contato com trabalho de manicure quanto para profissionais que querem aperfeiçoar suas técnicas. Começamos do zero e avançamos gradualmente para técnicas profissionais.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <h3 class="font-bold">Quanto tempo tenho acesso ao curso?</h3>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-600 pb-6">
+                            O acesso dura por um ano! Nesse período você pode assistir às aulas quantas vezes quiser, no seu próprio ritmo, e terá direito a todas as atualizações futuras do curso sem custo adicional.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <h3 class="font-bold">Como funciona a grupo VIP?</h3>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-600 pb-6">
+                            Após a inscrição, você receberá um convite para entrar em nosso grupo exclusivo no WhatsApp, onde poderá tirar dúvida, compartilhar experiências e networking com outras alunas.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item -->
+                <div class="faq-item bg-white rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <h3 class="font-bold">Quais materiais preciso para começar?</h3>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="text-gray-600 pb-6">
+                            No primeiro módulo detalhamos todos os materiais básicos necessários (com marcas recomendadas) e alternativas mais acessíveis. Você pode começar com um kit básico e ir expandindo conforme avança no curso.
+                        </p>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-custom-brown text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="  text-3xl md:text-4xl font-bold mb-6">
+                Transforme sua paixão em <span class="text-amber-200">resultados</span>
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90">
+                Comece hoje mesmo sua jornada como manicure profissional e dê o primeiro passo para conquistar sua independência financeira fazendo o que ama.
+            </p>
+            <a href="https://pay.kiwify.com.br/QOMYT9q" target="_blank" class="inline-block bg-white text-custom-brown px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors">
+                QUERO COMEÇAR AGORA
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                    © 2025 Código da Manicure. Todos os direitos reservados.
+                </p>
+                <div class="flex justify-center space-x-4 sm:space-x-6">
+                    <a href="https://www.instagram.com/giselevarelas/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BfA2badZi/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl sm:text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@giselevarelas" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl sm:text-2xl"></i>
+                    </a>
+            
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                faqItem.classList.toggle('active');
+            });
+        });
+
+        // Testimonial Toggle Functionality
+        function toggleTestimonial(testimonialId, button) {
+            const testimonialText = document.getElementById(testimonialId);
+            const icon = button.querySelector('i');
+            
+            if (testimonialText.classList.contains('expanded')) {
+                testimonialText.classList.remove('expanded');
+                button.innerHTML = '<i class="fas fa-chevron-down"></i> Ver mais';
+            } else {
+                testimonialText.classList.add('expanded');
+                button.innerHTML = '<i class="fas fa-chevron-up"></i> Ver menos';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Video Modal Functionality
+        function openVideoModal(videoId) {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById(videoId);
+            modal.classList.remove('hidden');
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById('testimonial-video-3');
+            modal.classList.add('hidden');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        // Close modal when clicking outside the video
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('video-modal');
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeVideoModal();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div class="relative bg-white rounded-lg p-4 max-w-4xl w-full mx-4">
+            <button onclick="closeVideoModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold z-10">
+                &times;
+            </button>
+            <div class="aspect-video">
+                <video id="testimonial-video-3" class="w-full h-full rounded" controls>
+                    <source src="video/depoimento2.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
