@@ -1035,6 +1035,29 @@ src="https://www.facebook.com/tr?id=1163402462074647&ev=PageView&noscript=1"
         // Update countdown every second
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Initial call
+
+        // Facebook Pixel: rastrear cliques nos links de vendas
+        function trackVendaClick(el) {
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'ClickVendas', {
+                        link_url: el.href,
+                        cta_text: (el.textContent || '').trim(),
+                        page_path: location.pathname
+                    });
+                }
+            } catch (e) { /* silencioso */ }
+        }
+
+        // Adicionar listeners a todos os links para a Kiwify
+        document.addEventListener('DOMContentLoaded', function () {
+            const vendaLinks = document.querySelectorAll('a[href="https://pay.kiwify.com.br/8FamMkc"]');
+            vendaLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    trackVendaClick(this);
+                });
+            });
+        });
     </script>
 
     <!-- Video Modal -->
