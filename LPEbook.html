@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manicure Perfeita com Tesoura | Ebook</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brownPrimary: '#a45a35',
+            cream: '#f7f3ef',
+            darkText: '#2c2c2c'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #2c2c2c;
+    }
+
+
+    .hero-bg {
+      background: linear-gradient(180deg, #f7f3ef 0%, #ffffff 100%);
+    }
+
+    .btn-primary {
+      transition: 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .card-hover {
+      transition: 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+    }
+
+    .shadow-soft {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div>
+        <img src="images/LogoPreto.png" alt="Gisele Varela" class="h-10">
+      </div>
+
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#sobre" class="hover:text-brownPrimary">SOBRE</a>
+        <a href="#beneficios" class="hover:text-brownPrimary">BENEFÍCIOS</a>
+        <a href="#conteudo" class="hover:text-brownPrimary">CONTEÚDO</a>
+        <a href="#faq" class="hover:text-brownPrimary">DÚVIDAS</a>
+      </div>
+
+      <a href="#comprar" class="bg-brownPrimary text-white px-5 py-2 rounded-full text-sm font-semibold btn-primary">
+        COMPRAR
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-40 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <span class="bg-white border border-brownPrimary text-brownPrimary px-4 py-2 rounded-full text-sm font-semibold inline-block mb-6">
+            Ebook Profissional
+          </span>
+
+          <h1 class="text-3xl md:text-5xl md:text-6xl leading-tight font-bold mb-8">
+            Saia do básico e <span class="text-brownPrimary">aprenda uma técnica profissional</span> para atrair mais clientes e aumentar sua renda
+          </h1>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-10">
+           Guia para sair do básico na manicure e começar a valorizar seu trabalho
+
+          <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="#comprar" class="bg-brownPrimary text-white px-8 py-5 rounded-full font-bold text-center btn-primary shadow-soft">
+              QUERO MEU EBOOK
+            </a>
+
+            <a href="#conteudo" class="border border-gray-300 px-8 py-5 rounded-full font-semibold text-center hover:border-brownPrimary hover:text-brownPrimary transition">
+              VER CONTEÚDO
+            </a>
+          </div>
+
+          <div class="flex gap-8 flex-wrap">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-brownPrimary"></i>
+              <span class="text-sm">Passo a passo completo</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-brownPrimary"></i>
+              <span class="text-sm">Ideal para iniciantes</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-brownPrimary"></i>
+              <span class="text-sm">Técnica profissional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="bg-white rounded-[40px] p-6 shadow-soft">
+            <img
+              src="images/ebook3.webp"
+              alt="Ebook manicure perfeita"
+              class="w-full rounded-3xl object-cover"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="pt-0 pb-10 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="text-brownPrimary uppercase tracking-[4px] text-xl font-bold">Benefícios</span>
+        <h2 class="text-4xl font-bold mt-4 mb-6">Por que aprender essa técnica?</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          A cuticulagem com tesoura vem crescendo porque entrega um acabamento mais sofisticado, delicado e valorizado pelas clientes.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="bg-cream rounded-3xl p-8 card-hover">
+          <div class="w-16 h-16 rounded-2xl bg-brownPrimary text-white flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-4">Acabamento Impecável</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Aprenda a deixar a cutícula mais uniforme, limpa e sofisticada.
+          </p>
+        </div>
+
+        <div class="bg-cream rounded-3xl p-8 card-hover">
+          <div class="w-16 h-16 rounded-2xl bg-brownPrimary text-white flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-4">Diferencial Profissional</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Destaque-se oferecendo uma técnica premium que poucas profissionais dominam.
+          </p>
+        </div>
+
+        <div class="bg-cream rounded-3xl p-8 card-hover">
+          <div class="w-16 h-16 rounded-2xl bg-brownPrimary text-white flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-4">Mais Delicadeza</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Uma técnica mais cuidadosa para clientes que valorizam conforto e segurança.
+          </p>
+        </div>
+
+        <div class="bg-cream rounded-3xl p-8 card-hover">
+          <div class="w-16 h-16 rounded-2xl bg-brownPrimary text-white flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-4">Aumente Seu Valor</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Técnicas diferenciadas aumentam o valor percebido do seu atendimento.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-10 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <img
+            src="images/gisele.webp"
+            alt="Gisele Varela"
+            class="rounded-[40px] shadow-soft w-full"
+          />
+        </div>
+
+        <div>
+          <span class="text-brownPrimary uppercase tracking-[4px] text-xl font-bold">Sobre a autora</span>
+
+          <h2 class="text-4xl font-bold mt-4 mb-8">
+            Conheça Gisele Varela
+          </h2>
+
+          <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+            Especialista em cuticulagem com tesoura e manicure perfeita, Gisele desenvolveu um método focado em acabamento profissional, precisão e delicadeza.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-8 text-lg">
+            Neste ebook, você vai aprender desde a preparação correta da cutícula até os movimentos ideais da tesoura para criar um acabamento uniforme e sofisticado.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-soft">
+              <h3 class="font-bold text-3xl text-brownPrimary mb-2">+1000</h3>
+              <p class="text-gray-600">Alunas impactadas</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-soft">
+              <h3 class="font-bold text-3xl text-brownPrimary mb-2">Método</h3>
+              <p class="text-gray-600">Passo a passo simplificado</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEUDO -->
+  <section id="conteudo" class="py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="text-brownPrimary uppercase tracking-[4px] text-xl font-bold">Conteúdo</span>
+        <h2 class="text-4xl font-bold mt-4 mb-6">O que você vai aprender</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+
+        <div class="bg-cream p-8 rounded-3xl shadow-soft">
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>O que é a técnica de cuticulagem com tesoura</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Materiais necessários para começar</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Preparação correta da cutícula</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Posicionamento da mão e da tesoura</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-cream p-8 rounded-3xl shadow-soft">
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Movimentos ideais para não machucar</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Erros mais comuns e como evitar</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Dicas para aperfeiçoar sua técnica</span>
+            </li>
+
+            <li class="flex gap-4">
+              <i class="fa-solid fa-circle-check text-brownPrimary mt-1"></i>
+              <span>Como valorizar seu atendimento</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section id="comprar" class="py-10 bg-[#2d1d15] text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <span class="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm inline-block mb-8">
+        Oferta Especial
+      </span>
+
+      <h2 class="text-5xl font-bold leading-tight mb-8">
+        Comece agora sua evolução na manicure
+      </h2>
+
+      <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Tenha acesso imediato ao ebook completo e aprenda uma técnica que pode transformar a qualidade do seu atendimento.
+      </p>
+
+      <div class="bg-white text-darkText rounded-[40px] p-12 max-w-2xl mx-auto shadow-soft">
+
+        <p class="text-gray-500 line-through text-2xl mb-2">
+          De R$97,00
+        </p>
+
+        <h3 class="text-6xl font-bold text-brownPrimary mb-4">
+          R$29,90
+        </h3>
+
+        <p class="text-gray-600 mb-10">
+          Pagamento único • Acesso imediato
+        </p>
+
+        <a href="#" class="block bg-brownPrimary text-white py-5 rounded-full text-lg font-bold btn-primary shadow-soft">
+          QUERO COMPRAR AGORA
+        </a>
+
+        <div class="mt-8 text-sm text-gray-500 flex justify-center gap-6 flex-wrap">
+          <span><i class="fa-solid fa-lock mr-2"></i>Compra segura</span>
+          <span><i class="fa-solid fa-bolt mr-2"></i>Acesso imediato</span>
+          <span><i class="fa-solid fa-mobile-screen mr-2"></i>Acesso pelo celular</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="text-brownPrimary uppercase tracking-[4px] text-xl font-bold">Dúvidas Frequentes</span>
+        <h2 class="text-4xl font-bold mt-4">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="space-y-6">
+
+        <div class="border border-gray-200 rounded-3xl p-8">
+          <h3 class="font-bold text-xl mb-4">O ebook é para iniciantes?</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Sim. O material foi desenvolvido tanto para iniciantes quanto para manicures que desejam aperfeiçoar sua técnica.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-3xl p-8">
+          <h3 class="font-bold text-xl mb-4">Como vou receber o ebook?</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Após a confirmação do pagamento, você receberá acesso imediato ao material digital.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-3xl p-8">
+          <h3 class="font-bold text-xl mb-4">Posso acessar pelo celular?</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Sim. O ebook pode ser acessado pelo celular, tablet ou computador.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div>
+        <h3 class="font-bold text-xl mb-2">Gisele Varela</h3>
+        <p class="text-gray-400 text-sm">
+          Técnica profissional de manicure perfeita.
+        </p>
+      </div>
+
+      <div class="flex gap-6 text-2xl">
+        <a href="https://www.instagram.com/giselevarelas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/M%C3%A9todo-Gisele-Varela-de-Manicure-Perfeita/61577003972166/"" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@giselevarelas" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
