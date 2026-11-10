@@ -17,7 +17,45 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FFF8F3}
 a{color:#B4410C}a:hover{color:#8A300A}
 img{max-width:100%}
-@media (max-width:600px){h1{font-size:36px!important}h2{font-size:28px!important}}
+#oferta{scroll-margin-top:72px}
+.topbar{position:sticky;top:0;z-index:50;border-bottom:1px solid #F0DDD0;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.topbar-in{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:44px;height:44px;object-fit:contain;flex:none}
+.brand-name{display:flex;flex-direction:column;font-family:Montserrat,sans-serif;font-weight:700;line-height:1.2;color:#5C3A26;min-width:0}
+.brand-name b{font-size:15px;letter-spacing:.04em;font-weight:700;white-space:nowrap}
+.brand-name small{font-size:11px;letter-spacing:.12em;font-weight:600;color:#8A300A}
+.top-cta{flex:none;font-family:Montserrat,sans-serif;font-weight:700;font-size:15px;text-decoration:none;color:#fff;background:#C2410C;padding:10px 20px;border-radius:999px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;white-space:nowrap}
+.top-cta:hover{color:#fff;background:#8A300A}
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #F0DDD0;box-shadow:0 -8px 24px -12px rgba(90,40,10,.3);transform:translateY(110%);transition:transform .3s ease}
+.sticky-buy.show{transform:none}
+.sticky-price{display:flex;flex-direction:column;line-height:1.2;font-family:Montserrat,sans-serif;min-width:0}
+.sticky-price small{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:#6B5648}
+.sticky-price strong{font-size:22px;font-weight:800;color:#1F1712}
+.sticky-btn{flex:1 1 auto;max-width:240px;font-family:Montserrat,sans-serif;font-weight:700;font-size:16px;text-decoration:none;color:#fff;background:#C2410C;padding:12px 16px;border-radius:999px;min-height:48px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;animation:pulse 2.4s ease-in-out infinite}
+.sticky-btn:hover{color:#fff}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(194,65,12,.45)}50%{box-shadow:0 0 0 10px rgba(194,65,12,0)}}
+@media (prefers-reduced-motion:reduce){.sticky-btn{animation:none}.sticky-buy{transition:none}html{scroll-behavior:auto}}
+@media (max-width:768px){
+.sticky-buy{display:flex}
+body{padding-bottom:76px}
+}
+@media (max-width:600px){
+h1{font-size:30px!important;line-height:1.12!important}
+h2{font-size:26px!important}
+section>div{padding-top:44px!important;padding-bottom:44px!important;gap:24px!important}
+#oferta>div{padding-top:32px!important;padding-bottom:40px!important}
+#oferta>div>div{padding:28px 20px!important}
+section a[href="#oferta"]{align-self:stretch!important;width:100%;justify-content:center!important;text-align:center}
+.hero-cta{flex-direction:column;align-items:stretch!important}
+.hero-cta span{text-align:center}
+.topbar-in{padding:6px 14px}
+.brand img{width:38px;height:38px}
+.brand-name b{font-size:13px}
+.brand-name small{font-size:10px}
+.top-cta{font-size:13px;padding:8px 14px;min-height:40px}
+}
+@media (max-width:360px){.brand-name small{display:none}}
 </style>
 <!-- Meta Pixel: siteGi -->
 <script>
@@ -36,13 +74,13 @@ fbq('track','ViewContent',{content_name:'Ebook Corte de Cuticula com Tesoura',co
 <div style="font-family: 'DM Sans', system-ui, sans-serif; color: #2A211C; background: #FFF8F3; line-height: 1.55; font-size: 17px">
 
 <!-- Topo -->
-<header style="border-bottom: 1px solid #F0DDD0; background: #FFFFFF">
-<div style="max-width: 1120px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
-<div style="display: flex; align-items: center; gap: 12px">
-<img src="images/logo.png" alt="Gisele Varela Nail Artist" style="width: 56px; height: 56px; object-fit: contain">
-<span style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; color: #5C3A26">GISELE VARELA · NAIL ARTIST</span>
+<header class="topbar">
+<div class="topbar-in">
+<div class="brand">
+<img src="images/logo.png" alt="Gisele Varela Nail Artist">
+<span class="brand-name"><b>GISELE VARELA</b><small>NAIL ARTIST</small></span>
 </div>
-<a href="#oferta" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 12px 20px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Quero o ebook</a>
+<a href="#oferta" class="top-cta">Comprar agora</a>
 </div>
 </header>
 
@@ -53,8 +91,8 @@ fbq('track','ViewContent',{content_name:'Ebook Corte de Cuticula com Tesoura',co
 <span style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #8A300A">Ebook prático para manicures</span>
 <h1 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 50px; line-height: 1.08; color: #1F1712">Corte de cutícula com tesoura: o passo a passo para um acabamento impecável</h1>
 <p style="margin: 0; font-size: 19px; color: #4A3A30; max-width: 560px">Aprenda a pegada certa, o ângulo de 90º e o movimento curtinho que faz a tesoura flutuar entre a unha e a pele, sem riscar a unha e sem medo de cortar a cliente. Com fotos reais de cada etapa.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 8px">
-<a href="#oferta" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 18px 32px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">Quero aprender por R$ 19,90</a>
+<div class="hero-cta" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 8px">
+<a href="#oferta" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 18px 32px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">Comprar por R$ 19,90</a>
 <span style="font-size: 15px; color: #5C4A3E">Acesso imediato em PDF · Compra segura pela Kiwify</span>
 </div>
 </div>
@@ -135,7 +173,7 @@ fbq('track','ViewContent',{content_name:'Ebook Corte de Cuticula com Tesoura',co
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 36px; line-height: 1.15; color: #1F1712">Cada etapa com foto real, tirada na bancada</h2>
 <p style="margin: 0; color: #4A3A30">Nada de ilustração genérica. Você vê a posição exata da tesoura em cada momento do corte, do início na lateral até a borda proximal, e compara com o que está fazendo na sua cliente.</p>
-<a href="#oferta" style="align-self: flex-start; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 16px 28px; border-radius: 999px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center">Quero o passo a passo</a>
+<a href="#oferta" style="align-self: flex-start; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 16px 28px; border-radius: 999px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center">Garantir meu ebook</a>
 </div>
 <div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
@@ -208,7 +246,7 @@ fbq('track','ViewContent',{content_name:'Ebook Corte de Cuticula com Tesoura',co
 <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 52px; line-height: 1.1; color: #1F1712">R$ 19,90</span>
 <span style="font-size: 15px; color: #6B5648">pagamento único</span>
 </div>
-<a href="https://pay.kiwify.com.br/HO2A3Sz" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 20px 24px; border-radius: 999px; min-height: 60px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center">Quero o ebook agora</a>
+<a href="https://pay.kiwify.com.br/HO2A3Sz" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 20px 24px; border-radius: 999px; min-height: 60px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center">Comprar agora por R$ 19,90</a>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; font-size: 14px; color: #5C4A3E">
 <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Compra segura pela Kiwify</span>
 <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>Garantia de 7 dias</span>
@@ -246,12 +284,39 @@ fbq('track','ViewContent',{content_name:'Ebook Corte de Cuticula com Tesoura',co
 <section style="background: #2A1E17">
 <div style="max-width: 1120px; margin: 0 auto; padding: 64px 20px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
 <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 32px; line-height: 1.2; color: #FFFFFF; max-width: 680px">Seu próximo atendimento pode ter o acabamento que você sempre quis</h2>
-<a href="https://pay.kiwify.com.br/HO2A3Sz" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 18px 32px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">Quero o ebook por R$ 19,90</a>
+<a href="https://pay.kiwify.com.br/HO2A3Sz" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; color: #FFFFFF; background: #C2410C; padding: 18px 32px; border-radius: 999px; min-height: 56px; box-sizing: border-box; display: inline-flex; align-items: center">Comprar por R$ 19,90</a>
 <span style="font-size: 14px; color: #E8D3C4">© Gisele Varela · Nail Artist · @giselevarelas</span>
 </div>
 </section>
 
 </div>
+
+<!-- Barra de compra fixa (mobile) -->
+<div class="sticky-buy" id="stickyBuy" aria-hidden="true">
+<div class="sticky-price"><small>Ebook · pagamento único</small><strong>R$ 19,90</strong></div>
+<a href="https://pay.kiwify.com.br/HO2A3Sz" class="sticky-btn" tabindex="-1">Comprar agora</a>
+</div>
+<script>
+// Mostra a barra fixa o tempo todo, exceto quando a oferta ou o CTA final já estão na tela
+(function(){
+  var bar = document.getElementById('stickyBuy');
+  var targets = [document.getElementById('oferta'), document.querySelector('section:last-of-type')];
+  if(!bar || !('IntersectionObserver' in window)){ if(bar) bar.classList.add('show'); return; }
+  var visible = new Set();
+  function sync(){
+    var hide = visible.size > 0;
+    bar.classList.toggle('show', !hide);
+    bar.setAttribute('aria-hidden', hide ? 'true' : 'false');
+    bar.querySelector('a').tabIndex = hide ? -1 : 0;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
+    sync();
+  }, {threshold: 0.25});
+  targets.forEach(function(t){ if(t) io.observe(t); });
+  sync();
+})();
+</script>
 <script>
 // Repassa UTMs e parâmetros do anúncio (utm_*, fbclid, src) para o checkout da Kiwify
 (function(){
